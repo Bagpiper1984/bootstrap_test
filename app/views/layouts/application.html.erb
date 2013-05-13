@@ -31,9 +31,11 @@
 		  <li><%= link_to "Orders", '#' %></li>
 		  <li><%= link_to "Products", '#' %></li>
 		</ul>
-		<!--<%= User.count %>-->
-		<!--<%= session[:user_id] %>-->
-		<!--<%= User.find(session[:user_id]).name %>-->
+		<%= User.count %>
+		<% if User.count != 0 %>
+		  <%= session[:user_id] %>
+		  <%= User.find(session[:user_id]).name %>
+		<% end %>  
 	  <% end %>
 	</div>
       

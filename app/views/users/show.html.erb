@@ -1,15 +1,23 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @user.name %>
-</p>
+<div class="row">
+  <aside class="span4">
+    <section>
+	  <p>
+	    <%= gravatar_for @user %>
+	  </p>
+	  <p>
+	    <b>Name:</b>
+	    <%= @user.name %>
+	  </p>
 
-<p>
-  <b>Email:</b>
-  <%= @user.email %>
-</p>
-
+	  <p>
+	    <b>Email:</b>
+	    <%= @user.email %>
+	  </p>
+    </section>	
+  </aside>
+</div>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
